@@ -1,20 +1,20 @@
 .navbar {
-  background: rgba(26, 26, 26, 0.7);
+  background: rgba(15, 20, 25, 0.85);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 
-    0 4px 24px rgba(0, 0, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 4px 24px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  border-bottom: 1px solid rgba(74, 144, 226, 0.15);
   transition: all 0.3s ease;
 }
 
 .navbar:hover {
-  background: rgba(26, 26, 26, 0.85);
-  border-bottom-color: rgba(212, 175, 55, 0.5);
+  background: rgba(15, 20, 25, 0.95);
+  border-bottom-color: rgba(74, 144, 226, 0.3);
 }
 
 .navbar-container {
@@ -27,14 +27,15 @@
 }
 
 .navbar-brand a {
+  font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
   font-weight: 700;
-  color: #ffffff;
+  color: #f8f9fa;
   text-decoration: none;
   letter-spacing: 2px;
   transition: all 0.3s ease;
   position: relative;
-  background: linear-gradient(135deg, #ffffff 0%, #d4af37 100%);
+  background: linear-gradient(135deg, #f8f9fa 0%, #4a90e2 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -47,7 +48,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, #d4af37, #f4d03f);
+  background: linear-gradient(90deg, #4a90e2, #5fb3d3);
   transition: width 0.3s ease;
 }
 
@@ -66,7 +67,8 @@
 }
 
 .navbar-links a {
-  color: #e0e0e0;
+  font-family: 'Montserrat', sans-serif;
+  color: #e1e8ed;
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
@@ -74,7 +76,7 @@
   padding: 0.6rem 1.2rem;
   position: relative;
   transition: all 0.3s ease;
-  border-radius: 8px;
+  border-radius: 0;
 }
 
 .navbar-links a::before {
@@ -84,8 +86,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(212, 175, 55, 0.1);
-  border-radius: 8px;
+  background: rgba(74, 144, 226, 0.1);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -95,13 +96,13 @@
 }
 
 .navbar-links a:hover {
-  color: #ffffff;
+  color: #f8f9fa;
   transform: translateY(-2px);
 }
 
 .navbar-links a.active {
-  color: #d4af37;
-  background: rgba(212, 175, 55, 0.15);
+  color: #4a90e2;
+  background: rgba(74, 144, 226, 0.1);
 }
 
 .navbar-links a.active::after {
@@ -112,8 +113,7 @@
   transform: translateX(-50%);
   width: 60%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #d4af37, transparent);
-  border-radius: 2px;
+  background: linear-gradient(90deg, transparent, #4a90e2, transparent);
 }
 
 /* Responsive */

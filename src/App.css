@@ -2,11 +2,22 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #0a0a0a;
+  background: #0f1419;
   position: relative;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Global page transitions */
 .app > * {
   animation: fadeIn 0.6s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

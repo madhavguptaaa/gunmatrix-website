@@ -7,17 +7,37 @@ const Home = () => {
         <div className="hero-background">
           <div className="hero-overlay"></div>
           <div className="animated-bg"></div>
+          <div className="hero-particles"></div>
         </div>
         <div className="hero-content">
-          <div className="hero-text-wrapper">
-            <h1 className="hero-title">
-              <span className="title-line">Gun</span>
-              <span className="title-line">Matrix</span>
-            </h1>
-            <p className="hero-subtitle">Professional Shooting Academy</p>
-            <p className="hero-description">
-              Nurturing skill, discipline, and confidence through the sport of shooting
-            </p>
+          <div className="hero-badge">Elite Training Academy</div>
+          <h1 className="hero-title">
+            <span className="title-main">Gun</span>
+            <span className="title-accent">Matrix</span>
+          </h1>
+          <div className="hero-divider"></div>
+          <p className="hero-subtitle">Professional Shooting Academy</p>
+          <p className="hero-description">
+            Where precision meets discipline, and excellence becomes a habit. 
+            Nurturing champions through world-class training and unwavering dedication.
+          </p>
+          <div className="hero-cta">
+            <a href="#programs" className="cta-button primary">Explore Programs</a>
+            <a href="#about" className="cta-button secondary">Learn More</a>
+          </div>
+          <div className="hero-stats">
+            <div className="stat-item">
+              <div className="stat-number">10+</div>
+              <div className="stat-label">Years Experience</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">500+</div>
+              <div className="stat-label">Trained Athletes</div>
+            </div>
+            <div className="stat-item">
+              <div className="stat-number">50+</div>
+              <div className="stat-label">National Medals</div>
+            </div>
           </div>
         </div>
         <div className="scroll-indicator">
@@ -47,7 +67,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="overview">
+      <section className="overview" id="about">
         <div className="container">
           <div className="overview-content glass-card">
             <h2 className="section-title">About GunMatrix</h2>
@@ -76,7 +96,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="features">
+      <section className="features" id="programs">
         <div className="container">
           <h2 className="section-title">Our Approach</h2>
           <div className="features-grid">
