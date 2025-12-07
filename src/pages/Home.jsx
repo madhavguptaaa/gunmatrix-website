@@ -1,8 +1,38 @@
+import { useState, useEffect } from 'react'
 import './Home.css'
 
 const Home = () => {
+  const [showAwardModal, setShowAwardModal] = useState(false)
+
+  useEffect(() => {
+    // Show modal on page load
+    const timer = setTimeout(() => {
+      setShowAwardModal(true)
+    }, 500) // Small delay for smooth appearance
+
+    return () => clearTimeout(timer)
+  }, [])
+
+  const closeModal = () => {
+    setShowAwardModal(false)
+  }
+
   return (
     <div className="home">
+      {showAwardModal && (
+        <div className="award-modal-overlay">
+          <div className="award-modal-box">
+            <button className="award-modal-close" onClick={closeModal}>×</button>
+            <div className="award-modal-image">
+              <img src="/founder-photo-2.jpeg" alt="Award Recognition" />
+            </div>
+            <h2 className="award-modal-heading">Recognition & Achievement</h2>
+            <p className="award-modal-text">
+              Awarded as <strong>Best Young Entrepreneur</strong> by <strong className="cm-highlight">CM Delhi Rekha Gupta</strong> for contribution of GunMatrix in sports
+            </p>
+          </div>
+        </div>
+      )}
       <section className="hero">
         <div className="hero-background">
           <div className="hero-overlay"></div>
@@ -10,11 +40,6 @@ const Home = () => {
           <div className="hero-particles"></div>
         </div>
         <div className="hero-content">
-          <div className="award-highlight-full">
-            <span className="award-text">
-              Awarded as <strong>Best Young Entrepreneur</strong> by <strong className="cm-highlight">CM Delhi Rekha Gupta</strong> for contribution of GunMatrix in sports
-            </span>
-          </div>
           <div className="hero-main">
             <div className="hero-video-section">
               <div className="hero-video-wrapper">
@@ -47,7 +72,7 @@ const Home = () => {
 
       <section className="overview" id="about">
         <div className="container">
-          <div className="overview-content glass-card">
+          <div className="overview-content">
             <h2 className="section-title">About GunMatrix</h2>
             <div className="overview-text">
               <p>
@@ -65,26 +90,22 @@ const Home = () => {
       <section className="features" id="programs">
         <div className="container">
           <h2 className="section-title">Our Approach</h2>
-          <div className="features-grid">
-            <div className="feature-card glass-card">
+          <div className="features-list">
+            <div className="feature-item">
               <h3>Competitive Excellence</h3>
               <p>Structured training for <strong>state and national-level athletes</strong> with <strong>elite coaching</strong></p>
-              <div className="card-shine"></div>
             </div>
-            <div className="feature-card glass-card">
+            <div className="feature-item">
               <h3>Recreational Wellness</h3>
               <p>Shooting as a means to <strong>reduce stress</strong> and improve <strong>mental well-being</strong></p>
-              <div className="card-shine"></div>
             </div>
-            <div className="feature-card glass-card">
+            <div className="feature-item">
               <h3>Educational Programs</h3>
               <p>Collaboration with schools to introduce shooting as a <strong>constructive sport</strong></p>
-              <div className="card-shine"></div>
             </div>
-            <div className="feature-card glass-card">
+            <div className="feature-item">
               <h3>Safety First</h3>
               <p>Strong emphasis on <strong>safety</strong>, <strong>technical precision</strong>, and <strong>ethical sportsmanship</strong></p>
-              <div className="card-shine"></div>
             </div>
           </div>
         </div>

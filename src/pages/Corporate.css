@@ -82,8 +82,8 @@
 .corporate-intro {
   max-width: 900px;
   margin: 0 auto 4rem;
-  padding: 3rem;
-  text-align: center;
+  padding: 0;
+  text-align: left;
 }
 
 .intro-text {
@@ -99,8 +99,8 @@
 }
 
 .corporate-benefits {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 2.5rem;
   margin-bottom: 5rem;
   max-width: 1000px;
@@ -108,52 +108,51 @@
   margin-right: auto;
 }
 
-.benefit-card {
-  padding: 3rem 2.5rem;
-  text-align: left;
-  border-left: 3px solid var(--border-color);
-  transition: all 0.4s ease;
+.benefit-item {
+  padding: 0;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 2rem;
 }
 
-.benefit-card:hover {
-  border-left-color: var(--text-primary);
-  transform: translateY(-5px);
+.benefit-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
-.benefit-card h3 {
+.benefit-item h3 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 1.2rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  letter-spacing: 0.5px;
 }
 
-.benefit-card p {
+.benefit-item p {
   font-family: 'Poppins', sans-serif;
   font-size: 1.05rem;
   line-height: 1.8;
   color: var(--text-secondary);
   font-weight: 300;
+  margin: 0;
 }
 
-.benefit-card p strong {
+.benefit-item p strong {
   color: var(--text-primary);
 }
 
 .corporate-programs,
 .corporate-testimonials {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto 4rem;
-  padding: 3rem;
+  padding: 0;
 }
 
 .corporate-contact {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto 4rem;
-  padding: 4rem 3rem;
-  text-align: center;
+  padding: 0;
+  text-align: left;
 }
 
 .programs-list,
@@ -172,23 +171,7 @@
   transition: all 0.3s ease;
 }
 
-:root[data-theme="dark"] .program-item,
-:root[data-theme="dark"] .testimonial-item {
-  background: rgba(0, 0, 0, 0.2);
-  border-left-color: rgba(255, 255, 255, 0.3);
-}
-
-:root[data-theme="light"] .program-item,
-:root[data-theme="light"] .testimonial-item {
-  background: rgba(0, 0, 0, 0.05);
-  border-left-color: rgba(0, 0, 0, 0.2);
-}
-
-.program-item:hover,
-.testimonial-item:hover {
-  border-left-color: var(--text-primary);
-  transform: translateX(5px);
-}
+/* Removed card backgrounds and hover effects for cleaner design */
 
 .program-item h3,
 .testimonial-item h3 {
@@ -233,19 +216,9 @@
 
 .contact-info {
   margin: 2rem 0;
-  padding: 2rem;
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border-color);
-}
-
-:root[data-theme="dark"] .contact-info {
-  background: rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 255, 255, 0.1);
-}
-
-:root[data-theme="light"] .contact-info {
-  background: rgba(0, 0, 0, 0.05);
-  border-color: rgba(0, 0, 0, 0.1);
+  padding: 0;
+  background: transparent;
+  border: none;
 }
 
 .contact-info p {
@@ -453,7 +426,7 @@
   .corporate-programs,
   .corporate-testimonials,
   .corporate-contact {
-    padding: 2rem 1.5rem;
+    padding: 0;
     margin-bottom: 3rem;
   }
 
@@ -468,22 +441,22 @@
     margin-bottom: 3rem;
   }
 
-  .benefit-card {
-    padding: 2rem 1.5rem;
+  .benefit-item {
+    padding-bottom: 1.5rem;
   }
 
-  .benefit-card h3 {
+  .benefit-item h3 {
     font-size: 1.3rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
   }
 
-  .benefit-card p {
+  .benefit-item p {
     font-size: 0.95rem;
   }
 
   .program-item,
   .testimonial-item {
-    padding: 1.5rem 1.2rem;
+    padding-bottom: 1.5rem;
   }
 
   .program-item h3,

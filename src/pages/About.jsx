@@ -20,8 +20,8 @@ const About = () => {
             </p>
             
             <div className="different-points">
-              <div className="different-point glass-card">
-                <h3 className="point-title">1. Psychology-Led Shooting Training</h3>
+              <div className="different-point">
+                <h3 className="point-title">Psychology-Led Shooting Training</h3>
                 <p>
                   Unlike conventional ranges, GunMatrix has a qualified sports psychologist on board, ensuring that:
                 </p>
@@ -33,8 +33,8 @@ const About = () => {
                 <p className="point-highlight">We believe that a <strong>strong mind creates a steady hand</strong>, and <strong>mental training</strong> is fundamental to achieving excellence in shooting sports.</p>
               </div>
 
-              <div className="different-point glass-card">
-                <h3 className="point-title">2. Shooting as a Recreational & Life-Enriching Activity</h3>
+              <div className="different-point">
+                <h3 className="point-title">Shooting as a Recreational & Life-Enriching Activity</h3>
                 <p>
                   GunMatrix actively promotes shooting as a recreational sport for all ages. You don't have to be an athlete to enjoy shooting.
                 </p>
@@ -48,10 +48,9 @@ const About = () => {
                   Shooting at GunMatrix provides an <strong>engaging and empowering experience</strong> — a space where everyone can explore the sport <strong>without pressure or judgment</strong>, fostering <strong>personal growth</strong> and <strong>well-being</strong>.
                 </p>
               </div>
-
             </div>
 
-            <div className="vision-section glass-card">
+            <div className="vision-section">
               <h3 className="vision-title">The Vision Forward</h3>
               <p className="vision-text">
                 Ananya believes that <strong>mental strength</strong>, <strong>emotional balance</strong>, and <strong>enjoyment of sport</strong> are the true markers of success. Through GunMatrix, her mission is to create a space where sport <strong>heals</strong>, <strong>empowers</strong>, and <strong>inspires</strong>—while building <strong>champions both on and off the range</strong>.
@@ -175,58 +174,40 @@ const About = () => {
       <section className="programs">
         <div className="container">
           <h2 className="section-title">Training Programs</h2>
-          <div className="programs-grid">
-            <div className="program-card">
+          <div className="programs-list">
+            <div className="program-item">
               <h3>Beginner Programs</h3>
               <p>
                 <strong>Structured introduction</strong> to shooting sports with emphasis on <strong>safety</strong>, <strong>basic techniques</strong>, 
-                and <strong>fundamental skills</strong>. Perfect for those new to the sport.
+                and <strong>fundamental skills</strong>. Perfect for those new to the sport. Includes <strong>safety protocols</strong>, 
+                <strong>basic shooting techniques</strong>, <strong>equipment familiarization</strong>, and <strong>foundation building</strong>.
               </p>
-              <ul>
-                <li><strong>Safety protocols</strong> and procedures</li>
-                <li><strong>Basic shooting techniques</strong></li>
-                <li><strong>Equipment familiarization</strong></li>
-                <li><strong>Foundation building</strong></li>
-              </ul>
             </div>
-            <div className="program-card">
+            <div className="program-item">
               <h3>Recreational Shooting</h3>
               <p>
                 <strong>Stress-free shooting experience</strong> for <strong>mental well-being</strong>. Ideal for students, working 
-                professionals, and enthusiasts seeking <strong>relaxation</strong> and <strong>focus improvement</strong>.
+                professionals, and enthusiasts seeking <strong>relaxation</strong> and <strong>focus improvement</strong>. Features 
+                <strong> no competition pressure</strong>, <strong>stress reduction techniques</strong>, <strong>concentration enhancement</strong>, 
+                and <strong>emotional balance building</strong>.
               </p>
-              <ul>
-                <li><strong>No competition pressure</strong></li>
-                <li><strong>Stress reduction techniques</strong></li>
-                <li><strong>Concentration enhancement</strong></li>
-                <li><strong>Emotional balance building</strong></li>
-              </ul>
             </div>
-            <div className="program-card">
+            <div className="program-item">
               <h3>Competitive Training</h3>
               <p>
-                <strong>Elite-level coaching</strong> for <strong>state and national-level athletes</strong>. <strong>Advanced techniques</strong>, 
-                <strong> mental strength training</strong>, and <strong>competition preparation</strong>.
+                <strong>Elite-level coaching</strong> for <strong>state and national-level athletes</strong>. Includes <strong>advanced techniques</strong>, 
+                <strong> mental strength training</strong>, and <strong>competition preparation</strong>. Covers <strong>advanced technical training</strong>, 
+                <strong> mental strength development</strong>, <strong>competition strategy</strong>, and <strong>performance optimization</strong>.
               </p>
-              <ul>
-                <li><strong>Advanced technical training</strong></li>
-                <li><strong>Mental strength development</strong></li>
-                <li><strong>Competition strategy</strong></li>
-                <li><strong>Performance optimization</strong></li>
-              </ul>
             </div>
-            <div className="program-card">
+            <div className="program-item">
               <h3>School Programs</h3>
               <p>
                 <strong>Collaborative programs</strong> with educational institutions to introduce shooting as a 
-                <strong> constructive sport</strong> that enhances <strong>focus</strong>, <strong>self-control</strong>, and <strong>personality development</strong>.
+                <strong> constructive sport</strong> that enhances <strong>focus</strong>, <strong>self-control</strong>, and <strong>personality development</strong>. 
+                Includes <strong>curriculum integration</strong>, <strong>character development</strong>, <strong>focus and discipline training</strong>, 
+                and a <strong>safe learning environment</strong>.
               </p>
-              <ul>
-                <li><strong>Curriculum integration</strong></li>
-                <li><strong>Character development</strong></li>
-                <li><strong>Focus and discipline training</strong></li>
-                <li><strong>Safe learning environment</strong></li>
-              </ul>
             </div>
           </div>
         </div>

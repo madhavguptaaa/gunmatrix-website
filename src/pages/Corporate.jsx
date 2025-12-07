@@ -63,7 +63,7 @@ const Corporate = () => {
 
       <section className="corporate-content">
         <div className="container">
-          <div className="corporate-intro glass-card">
+          <div className="corporate-intro">
             <p className="intro-text">
               GunMatrix introduces shooting as a <strong>unique wellness and team-building activity</strong> for organizations. 
               Our <strong>corporate programs</strong> are designed to help employees step away from <strong>routine stress</strong> and reconnect 
@@ -72,28 +72,28 @@ const Corporate = () => {
           </div>
 
           <div className="corporate-benefits">
-            <div className="benefit-card glass-card">
+            <div className="benefit-item">
               <h3>Team Building</h3>
               <p>
                 Foster <strong>stronger team dynamics</strong> through <strong>collaborative shooting experiences</strong> that encourage 
                 <strong> communication</strong>, <strong>trust</strong>, and <strong>mutual support</strong> among colleagues.
               </p>
             </div>
-            <div className="benefit-card glass-card">
+            <div className="benefit-item">
               <h3>Stress Relief</h3>
               <p>
                 Provide employees with an <strong>effective outlet for stress management</strong> through <strong>focused</strong>, 
                 <strong> mindful shooting practice</strong> in a <strong>controlled environment</strong>.
               </p>
             </div>
-            <div className="benefit-card glass-card">
+            <div className="benefit-item">
               <h3>Mental Wellness</h3>
               <p>
                 Enhance employee <strong>mental health</strong> and <strong>well-being</strong> through activities that improve 
                 <strong> concentration</strong>, <strong>emotional regulation</strong>, and overall <strong>psychological resilience</strong>.
               </p>
             </div>
-            <div className="benefit-card glass-card">
+            <div className="benefit-item">
               <h3>Professional Development</h3>
               <p>
                 Develop <strong>focus</strong>, <strong>discipline</strong>, and <strong>precision skills</strong> that translate directly to improved 
@@ -102,7 +102,7 @@ const Corporate = () => {
             </div>
           </div>
 
-          <div className="corporate-programs glass-card">
+          <div className="corporate-programs">
             <h2 className="section-title">Our Corporate Programs</h2>
             <div className="programs-list">
               <div className="program-item">
@@ -129,7 +129,7 @@ const Corporate = () => {
             </div>
           </div>
 
-          <div className="corporate-testimonials glass-card">
+          <div className="corporate-testimonials">
             <h2 className="section-title">Client Collaborations</h2>
             <div className="testimonials-list">
               <div className="testimonial-item">
@@ -151,7 +151,7 @@ const Corporate = () => {
             </div>
           </div>
 
-          <div className="corporate-contact glass-card">
+          <div className="corporate-contact">
             <h2 className="section-title">Inquire About Corporate Programs</h2>
             <div className="contact-details">
               <p>
