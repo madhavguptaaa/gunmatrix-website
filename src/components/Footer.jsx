@@ -31,8 +31,7 @@ const Footer = () => {
             <ul className="footer-links">
               <li><a href="/">Home</a></li>
               <li><a href="/about">About</a></li>
-              <li><a href="#programs">Programs</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><a href="/corporate">Corporate Inquiries</a></li>
             </ul>
           </div>
 
@@ -41,22 +40,15 @@ const Footer = () => {
             <div className="contact-info">
               <div className="contact-item">
                 <svg className="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <span>Delhi, India</span>
+                <span>+91 84877 62866</span>
               </div>
               <div className="contact-item">
                 <svg className="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span>info@gunmatrix.com</span>
-              </div>
-              <div className="contact-item">
-                <svg className="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-                <span>+91 XXX XXX XXXX</span>
+                <span>ananyasapraal2@gmail.com</span>
               </div>
             </div>
           </div>
@@ -77,6 +69,21 @@ const Footer = () => {
                 <span className="hours-time">Closed</span>
               </div>
             </div>
+          </div>
+        </div>
+
+        <div className="footer-map-section">
+          <div className="footer-map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.1234567890123!2d77.1234567890123!3d28.1234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDA3JzI0LjQiTiA3N8KwMDcnMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+              width="100%"
+              height="150"
+              style={{ border: 0, borderRadius: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="GunMatrix Location"
+            ></iframe>
           </div>
         </div>
 

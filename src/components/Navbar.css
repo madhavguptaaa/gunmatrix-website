@@ -1,21 +1,36 @@
 .navbar {
-  background: rgba(15, 20, 25, 0.85);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 
-    0 4px 24px rgba(0, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    0 4px 24px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-bottom: 1px solid rgba(74, 144, 226, 0.15);
-  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.navbar:hover {
-  background: rgba(15, 20, 25, 0.95);
-  border-bottom-color: rgba(74, 144, 226, 0.3);
+:root[data-theme="dark"] .navbar {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 
+    0 4px 24px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+
+:root[data-theme="light"] .navbar {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 
+    0 4px 24px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 
 .navbar-container {
   max-width: 1200px;
@@ -27,38 +42,84 @@
 }
 
 .navbar-brand a {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #f8f9fa;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   text-decoration: none;
-  letter-spacing: 2px;
-  transition: all 0.3s ease;
   position: relative;
-  background: linear-gradient(135deg, #f8f9fa 0%, #4a90e2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
-.navbar-brand a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
+.navbar-logo {
+  height: 70px;
+  width: auto;
+  min-width: 70px;
+  object-fit: contain;
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* Ensure logo is visible even if it has transparency */
+.navbar-logo[src] {
+  background: transparent;
+}
+
+.navbar-brand-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000000;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+:root[data-theme="dark"] .navbar-brand-text {
+  color: #000000;
+}
+
+:root[data-theme="light"] .navbar-brand-text {
+  color: #000000;
+}
+
+.navbar-brand-text.typing {
+  border-right: 2px solid #000000;
+  animation: typing 1.2s steps(9, end) forwards, blink-caret 0.75s step-end 1.2s infinite;
+  white-space: nowrap;
+  overflow: hidden;
   width: 0;
-  height: 2px;
-  background: linear-gradient(90deg, #4a90e2, #5fb3d3);
-  transition: width 0.3s ease;
 }
 
-.navbar-brand a:hover::after {
+.navbar-brand-text.typing-complete {
+  border-right: 2px solid #000000;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #000000;
+  }
+}
+
+.navbar-brand-text.typing-complete {
   width: 100%;
 }
 
-.navbar-brand a:hover {
-  transform: scale(1.05);
-}
+
 
 .navbar-links {
   display: flex;
@@ -68,41 +129,28 @@
 
 .navbar-links a {
   font-family: 'Montserrat', sans-serif;
-  color: #e1e8ed;
+  color: #000000;
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   padding: 0.6rem 1.2rem;
   position: relative;
-  transition: all 0.3s ease;
   border-radius: 0;
+  text-transform: uppercase;
 }
 
-.navbar-links a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(74, 144, 226, 0.1);
-  opacity: 0;
-  transition: opacity 0.3s ease;
+:root[data-theme="dark"] .navbar-links a {
+  color: #000000;
 }
 
-.navbar-links a:hover::before {
-  opacity: 1;
+:root[data-theme="light"] .navbar-links a {
+  color: #000000;
 }
 
-.navbar-links a:hover {
-  color: #f8f9fa;
-  transform: translateY(-2px);
-}
 
 .navbar-links a.active {
-  color: #4a90e2;
-  background: rgba(74, 144, 226, 0.1);
+  color: #000000;
 }
 
 .navbar-links a.active::after {
@@ -113,25 +161,51 @@
   transform: translateX(-50%);
   width: 60%;
   height: 2px;
-  background: linear-gradient(90deg, transparent, #4a90e2, transparent);
+  background: #000000;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .navbar-container {
     padding: 1rem 1.5rem;
   }
 
-  .navbar-brand a {
-    font-size: 1.5rem;
-  }
-
   .navbar-links {
-    gap: 1.5rem;
+    gap: 2rem;
   }
 
   .navbar-links a {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0.8rem 1rem;
+    flex-wrap: wrap;
+  }
+
+  .navbar-logo {
+    height: 50px;
+    min-width: 50px;
+  }
+
+  .navbar-brand-text {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  .navbar-links {
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .navbar-links a {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.7rem;
   }
 }

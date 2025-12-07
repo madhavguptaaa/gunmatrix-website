@@ -2,10 +2,11 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: #0f1419;
+  background: var(--bg-primary);
   position: relative;
   opacity: 1;
   visibility: visible;
+  transition: background 0.3s ease;
 }
 
 /* Global page transitions */

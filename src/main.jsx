@@ -5,8 +5,8 @@ import './index.css'
 
 // Enhanced smooth scroll implementation
 if (typeof window !== 'undefined') {
-  // Smooth scroll function for browsers that don't support scroll-behavior
-  const smoothScrollTo = (element, target, duration) => {
+  // Enhanced smooth scroll function with easing
+  const smoothScrollTo = (element, target, duration = 800) => {
     target = Math.round(target)
     duration = Math.round(duration)
     if (duration < 0) {
@@ -21,50 +21,66 @@ if (typeof window !== 'undefined') {
     const start_element = element.scrollTop
     const distance = target - start_element
 
-    const smooth_step = (start, end, point) => {
-      if (point <= 0) return start
-      if (point >= 1) return end
-      return start + (end - start) * (point * point * (3 - 2 * point))
+    // Easing function for smooth acceleration/deceleration
+    const easeInOutCubic = (t) => {
+      return t < 0.5
+        ? 4 * t * t * t
+        : 1 - Math.pow(-2 * t + 2, 3) / 2
     }
 
     return new Promise((resolve) => {
-      const previous_top = element.scrollTop
-
       const scroll_frame = () => {
-        if (element.scrollTop !== previous_top) {
-          resolve()
-          return
-        }
-
         const now = Date.now()
-        const point = Math.min(1, (now - start_time) / duration)
-        const frame = Math.round(smooth_step(start_element, target, point))
+        const elapsed = now - start_time
+        const progress = Math.min(elapsed / duration, 1)
+        const eased = easeInOutCubic(progress)
+        const frame = Math.round(start_element + distance * eased)
 
         element.scrollTop = frame
 
-        if (frame === target) {
+        if (progress < 1) {
+          requestAnimationFrame(scroll_frame)
+        } else {
           resolve()
-          return
         }
-
-        setTimeout(scroll_frame, 0)
       }
 
-      scroll_frame()
+      requestAnimationFrame(scroll_frame)
     })
   }
 
-  // Apply smooth scroll to window
+  // Enhanced window scrollTo with smooth behavior
   const originalScrollTo = window.scrollTo
-  if (!('scrollBehavior' in document.documentElement.style)) {
-    window.scrollTo = function(options) {
-      if (typeof options === 'object' && options.behavior === 'smooth') {
-        smoothScrollTo(document.documentElement, options.top || window.pageYOffset, 500)
-      } else {
-        originalScrollTo.apply(window, arguments)
-      }
+  window.scrollTo = function(options) {
+    if (typeof options === 'object' && options.behavior === 'smooth') {
+      const target = options.top !== undefined ? options.top : window.pageYOffset
+      smoothScrollTo(document.documentElement, target, 800)
+    } else {
+      originalScrollTo.apply(window, arguments)
     }
   }
+
+  // Smooth scroll for anchor links
+  document.addEventListener('DOMContentLoaded', () => {
+    const handleAnchorClick = (e) => {
+      const link = e.target.closest('a[href^="#"]')
+      if (!link) return
+
+      const href = link.getAttribute('href')
+      if (href === '#' || href === '') return
+
+      const targetId = href.substring(1)
+      const targetElement = document.getElementById(targetId)
+      
+      if (targetElement) {
+        e.preventDefault()
+        const offsetTop = targetElement.getBoundingClientRect().top + window.pageYOffset - 100
+        smoothScrollTo(document.documentElement, offsetTop, 800)
+      }
+    }
+
+    document.addEventListener('click', handleAnchorClick)
+  })
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(
