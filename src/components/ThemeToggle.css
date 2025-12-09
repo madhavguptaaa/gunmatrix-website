@@ -1,0 +1,78 @@
+.theme-toggle-floating {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  z-index: 1000;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.2),
+    0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+:root[data-theme="dark"] .theme-toggle-floating {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(0, 0, 0, 0.2);
+  color: #000000;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+:root[data-theme="light"] .theme-toggle-floating {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(0, 0, 0, 0.2);
+  color: #000000;
+  box-shadow: 
+    0 4px 20px rgba(0, 0, 0, 0.2),
+    0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.theme-toggle-floating:hover {
+  transform: scale(1.1);
+  box-shadow: 
+    0 6px 24px rgba(0, 0, 0, 0.3),
+    0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+:root[data-theme="dark"] .theme-toggle-floating:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 
+    0 6px 24px rgba(0, 0, 0, 0.4),
+    0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-theme="light"] .theme-toggle-floating:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 
+    0 6px 24px rgba(0, 0, 0, 0.3),
+    0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.theme-toggle-floating:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+  .theme-toggle-floating {
+    width: 48px;
+    height: 48px;
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+  
+  .theme-toggle-floating svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
