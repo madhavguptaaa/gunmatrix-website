@@ -11,31 +11,24 @@ const Gallery = () => {
     const loadImages = async () => {
       setIsLoading(true)
       try {
-        // All images and videos from the gallery folder
+        // All images and videos from the gallery folder (only existing files)
         const mediaFiles = [
-          { file: 'IMG_2856.jpeg', title: 'State-of-the-art Facility', size: 'large', type: 'image' },
-          { file: '0ce2ee4b-b3d8-4e75-9d26-219f39b0b217.MP4', title: 'Training Video', size: 'large', type: 'video' },
-          { file: 'IMG_2857.jpeg', title: 'Precision Training', size: 'small', type: 'image' },
-          { file: 'IMG_2858.jpeg', title: 'Academy Event', size: 'medium', type: 'image' },
-          { file: 'IMG_2859.jpeg', title: 'Student Practice', size: 'large', type: 'image' },
-          { file: '201eec45-210e-4b79-a7e8-2e8caeaab9a5.MP4', title: 'Competition Highlights', size: 'medium', type: 'video' },
-          { file: 'IMG_2860.jpeg', title: 'Training Equipment', size: 'small', type: 'image' },
-          { file: 'IMG_2861.jpeg', title: 'Group Training', size: 'medium', type: 'image' },
-          { file: 'IMG_2862.jpeg', title: 'Shooting Range', size: 'large', type: 'image' },
-          { file: 'IMG_2903.jpeg', title: 'Advanced Training', size: 'small', type: 'image' },
-          { file: '2f42d820-e8e8-4a28-9422-ef4c3ead5bca.MP4', title: 'Academy Tour', size: 'large', type: 'video' },
-          { file: 'IMG_3131.jpeg', title: 'Competition Prep', size: 'medium', type: 'image' },
-          { file: 'IMG_3152.jpeg', title: 'Technical Session', size: 'large', type: 'image' },
-          { file: 'IMG_3303.jpeg', title: 'Academy Gathering', size: 'small', type: 'image' },
-          { file: 'IMG_6099.JPG', title: 'Competition Day', size: 'medium', type: 'image' },
-          { file: '9e76537e-cb4e-49a7-b79e-6dbfe6f33359.MP4', title: 'Training Session', size: 'medium', type: 'video' },
-          { file: 'IMG_7817.jpg', title: 'Academy Grounds', size: 'large', type: 'image' },
-          { file: 'IMG_8172.jpeg', title: 'Student Achievement', size: 'small', type: 'image' },
-          { file: 'IMG_8216.jpeg', title: 'Elite Coaching', size: 'medium', type: 'image' },
-          { file: 'IMG_8217.jpeg', title: 'Professional Guidance', size: 'large', type: 'image' },
-          { file: '313c1633-96c9-4451-9206-3b50e033e9b2.JPG', title: 'Range View', size: 'small', type: 'image' },
-          { file: '427ee849-4650-4fc8-b5c6-e0e52d2e7ddc.JPG', title: 'Success Story', size: 'medium', type: 'image' },
-          { file: '9d9694b1-dbca-4736-8110-cbb383a6f0e0.JPG', title: 'Team Event', size: 'large', type: 'image' }
+          { file: '0ce2ee4b-b3d8-4e75-9d26-219f39b0b217.MP4', title: 'Training Video', type: 'video' },
+          { file: '201eec45-210e-4b79-a7e8-2e8caeaab9a5.MP4', title: 'Competition Highlights', type: 'video' },
+          { file: '2f42d820-e8e8-4a28-9422-ef4c3ead5bca.MP4', title: 'Academy Tour', type: 'video' },
+          { file: '9e76537e-cb4e-49a7-b79e-6dbfe6f33359.MP4', title: 'Training Session', type: 'video' },
+          { file: '313c1633-96c9-4451-9206-3b50e033e9b2.JPG', title: 'Range View', type: 'image' },
+          { file: '427ee849-4650-4fc8-b5c6-e0e52d2e7ddc.JPG', title: 'Success Story', type: 'image' },
+          { file: '9d9694b1-dbca-4736-8110-cbb383a6f0e0.JPG', title: 'Team Event', type: 'image' },
+          { file: 'IMG_2862.jpeg', title: 'Shooting Range', type: 'image' },
+          { file: 'IMG_2903.jpeg', title: 'Advanced Training', type: 'image' },
+          { file: 'IMG_3131.jpeg', title: 'Competition Prep', type: 'image' },
+          { file: 'IMG_3152.jpeg', title: 'Technical Session', type: 'image' },
+          { file: 'IMG_3303.jpeg', title: 'Academy Gathering', type: 'image' },
+          { file: 'IMG_6099.JPG', title: 'Competition Day', type: 'image' },
+          { file: 'IMG_7817.jpg', title: 'Academy Grounds', type: 'image' },
+          { file: 'IMG_8172.jpeg', title: 'Student Achievement', type: 'image' },
+          { file: 'IMG_8216.jpeg', title: 'Elite Coaching', type: 'image' }
         ]
 
         const imageData = mediaFiles.map((item, index) => ({
@@ -43,7 +36,6 @@ const Gallery = () => {
           src: `/gallery/${item.file}`,
           alt: `GunMatrix Academy - ${item.title}`,
           title: item.title,
-          size: item.size,
           type: item.type
         }))
 
@@ -115,11 +107,11 @@ const Gallery = () => {
               <p>Please check back later.</p>
             </div>
           ) : (
-            <div className="gallery-grid-collage">
+            <div className="gallery-grid">
               {images.map((image, index) => (
                 <div
                   key={image.id}
-                  className={`gallery-item gallery-item-${image.size}`}
+                  className="gallery-item"
                   onClick={() => openLightbox(image)}
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >

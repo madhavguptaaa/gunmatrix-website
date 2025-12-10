@@ -1,6 +1,19 @@
+import { useState } from 'react'
 import './About.css'
 
 const About = () => {
+  const [showModal, setShowModal] = useState(false)
+
+  const openModal = () => {
+    setShowModal(true)
+    document.body.style.overflow = 'hidden'
+  }
+
+  const closeModal = () => {
+    setShowModal(false)
+    document.body.style.overflow = 'auto'
+  }
+
   return (
     <div className="about">
       <section className="about-hero">
@@ -26,19 +39,25 @@ const About = () => {
             <h2 className="section-title">Our Founder</h2>
             <div className="founder-layout">
               <div className="founder-images-grid">
-                <div className="founder-image-container">
+                <div className="founder-image-container" onClick={openModal}>
                   <img
                     src="/founder-photo.jpeg"
                     alt="Ananya Sapra - Founder of GunMatrix"
                     className="founder-image"
                   />
+                  <div className="image-hover-overlay">
+                    <span className="view-icon">🔍</span>
+                  </div>
                 </div>
-                <div className="founder-image-container">
+                <div className="founder-image-container" onClick={openModal}>
                   <img
-                    src="/founder-photo-2.jpeg"
-                    alt="Ananya Sapra - Competition"
+                    src="/founder-photo-3.png"
+                    alt="Ananya Sapra - Professional"
                     className="founder-image"
                   />
+                  <div className="image-hover-overlay">
+                    <span className="view-icon">🔍</span>
+                  </div>
                 </div>
               </div>
               <div className="founder-text">
@@ -277,6 +296,30 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {showModal && (
+        <div className="founder-modal" onClick={closeModal}>
+          <div className="founder-modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={closeModal} aria-label="Close">
+              <span>×</span>
+            </button>
+            <div className="founder-modal-images">
+              <div className="modal-image-wrapper">
+                <img
+                  src="/founder-photo.jpeg"
+                  alt="Ananya Sapra - Founder of GunMatrix"
+                />
+              </div>
+              <div className="modal-image-wrapper">
+                <img
+                  src="/founder-photo-3.png"
+                  alt="Ananya Sapra - Professional"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

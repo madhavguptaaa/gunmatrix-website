@@ -1,9 +1,20 @@
 import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import './ScrollToTop.css'
 
 const ScrollToTop = () => {
     const [isVisible, setIsVisible] = useState(false)
+    const { pathname } = useLocation()
 
+    // Scroll to top on route change
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'instant' // Use instant for immediate scroll on page load
+        })
+    }, [pathname])
+
+    // Show/hide scroll button based on scroll position
     useEffect(() => {
         const toggleVisibility = () => {
             if (window.pageYOffset > 300) {
@@ -23,7 +34,7 @@ const ScrollToTop = () => {
     const scrollToTop = () => {
         window.scrollTo({
             top: 0,
-            behavior: 'smooth'
+            behavior: 'smooth' // Smooth scroll for button click
         })
     }
 

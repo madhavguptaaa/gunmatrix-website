@@ -26,11 +26,11 @@ const createTransporter = () => {
 // Contact form endpoint
 app.post('/api/contact', async (req, res) => {
   try {
-    const { name, email, phone, company, message } = req.body;
+    const { name, email, phone, company, inquiryType, message } = req.body;
 
     // Validate required fields
     if (!name || !email || !phone || !message) {
-      return res.status(400).json({ 
+      return res.status(400).json({
         error: 'Missing required fields',
         message: 'Please fill in all required fields (name, email, phone, message)'
       });
@@ -39,17 +39,28 @@ app.post('/api/contact', async (req, res) => {
     // Create transporter
     const transporter = createTransporter();
 
+    // Format inquiry type for display
+    const inquiryTypeLabels = {
+      'training': 'Corporate Training Program',
+      'team-building': 'Team Building Event',
+      'wellness': 'Wellness Program',
+      'competition': 'Corporate Competition',
+      'workshop': 'Educational Workshop',
+      'other': 'Other'
+    };
+
     // Email content
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: process.env.RECEIVER_EMAIL || process.env.EMAIL_USER,
-      subject: `Corporate Inquiry from ${name}${company ? ` - ${company}` : ''}`,
+      subject: `Corporate Inquiry: ${inquiryTypeLabels[inquiryType] || 'General'} - ${name}${company ? ` (${company})` : ''}`,
       html: `
         <h2>New Corporate Inquiry</h2>
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
         ${company ? `<p><strong>Company:</strong> ${company}</p>` : ''}
+        <p><strong>Inquiry Type:</strong> ${inquiryTypeLabels[inquiryType] || inquiryType}</p>
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
         <hr>
@@ -61,13 +72,13 @@ app.post('/api/contact', async (req, res) => {
     // Send email
     await transporter.sendMail(mailOptions);
 
-    res.status(200).json({ 
+    res.status(200).json({
       success: true,
-      message: 'Your inquiry has been submitted successfully. We will get back to you soon.' 
+      message: 'Your inquiry has been submitted successfully. We will get back to you soon.'
     });
   } catch (error) {
     console.error('Error sending email:', error);
-    res.status(500).json({ 
+    res.status(500).json({
       error: 'Failed to send email',
       message: 'There was an error submitting your inquiry. Please try again later or contact us directly.'
     });

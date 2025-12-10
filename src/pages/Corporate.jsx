@@ -12,6 +12,8 @@ const Corporate = () => {
     })
 
     const [submitted, setSubmitted] = useState(false)
+    const [isSubmitting, setIsSubmitting] = useState(false)
+    const [error, setError] = useState(null)
 
     const handleChange = (e) => {
         setFormData({
@@ -20,22 +22,51 @@ const Corporate = () => {
         })
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault()
-        // Here you would typically send the data to a backend
-        console.log('Form submitted:', formData)
-        setSubmitted(true)
-        setTimeout(() => {
-            setSubmitted(false)
-            setFormData({
-                companyName: '',
-                contactPerson: '',
-                email: '',
-                phone: '',
-                inquiryType: 'training',
-                message: ''
+        setIsSubmitting(true)
+        setError(null)
+
+        try {
+            const response = await fetch('http://localhost:3001/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: formData.contactPerson,
+                    email: formData.email,
+                    phone: formData.phone,
+                    company: formData.companyName,
+                    inquiryType: formData.inquiryType,
+                    message: formData.message
+                }),
             })
-        }, 3000)
+
+            const data = await response.json()
+
+            if (response.ok) {
+                setSubmitted(true)
+                setTimeout(() => {
+                    setSubmitted(false)
+                    setFormData({
+                        companyName: '',
+                        contactPerson: '',
+                        email: '',
+                        phone: '',
+                        inquiryType: 'training',
+                        message: ''
+                    })
+                }, 4000)
+            } else {
+                setError(data.message || 'Failed to submit inquiry. Please try again.')
+            }
+        } catch (err) {
+            console.error('Error submitting form:', err)
+            setError('Unable to connect to server. Please ensure the server is running or contact us directly.')
+        } finally {
+            setIsSubmitting(false)
+        }
     }
 
     return (
@@ -263,8 +294,26 @@ const Corporate = () => {
                                     ></textarea>
                                 </div>
 
-                                <button type="submit" className="submit-btn" disabled={submitted}>
-                                    {submitted ? (
+                                {error && (
+                                    <div className="error-message">
+                                        <span className="error-icon">⚠️</span>
+                                        {error}
+                                    </div>
+                                )}
+
+                                {submitted && (
+                                    <div className="success-message">
+                                        <span className="checkmark">✓</span>
+                                        Your inquiry has been submitted successfully! We'll contact you soon.
+                                    </div>
+                                )}
+
+                                <button type="submit" className="submit-btn" disabled={isSubmitting || submitted}>
+                                    {isSubmitting ? (
+                                        <>
+                                            <span className="spinner"></span> Sending...
+                                        </>
+                                    ) : submitted ? (
                                         <>
                                             <span className="checkmark">✓</span> Submitted Successfully!
                                         </>

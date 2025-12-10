@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Home.css'
 
 const Home = () => {
@@ -58,50 +59,66 @@ const Home = () => {
         <div className="container">
           <h2 className="section-title">Our Approach</h2>
           <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
-                  <circle cx="12" cy="12" r="6" stroke="currentColor" strokeWidth="2" />
-                  <circle cx="12" cy="12" r="2" fill="currentColor" />
-                </svg>
+            <div className="feature-card" style={{ backgroundImage: 'url(/gallery/IMG_6099.JPG)' }}>
+              <div className="feature-overlay"></div>
+              <div className="feature-content">
+                <h3>Competitive Excellence</h3>
+                <p>Structured training for state and national-level athletes with elite coaching</p>
               </div>
-              <h3>Competitive Excellence</h3>
-              <p>Structured training for state and national-level athletes with elite coaching</p>
             </div>
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-                </svg>
+            <div className="feature-card" style={{ backgroundImage: 'url(/gallery/IMG_3131.jpeg)' }}>
+              <div className="feature-overlay"></div>
+              <div className="feature-content">
+                <h3>Recreational Wellness</h3>
+                <p>Shooting as a means to reduce stress and improve mental well-being</p>
               </div>
-              <h3>Recreational Wellness</h3>
-              <p>Shooting as a means to reduce stress and improve mental well-being</p>
             </div>
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" strokeWidth="2" />
-                  <path d="M3 8H21" stroke="currentColor" strokeWidth="2" />
-                  <circle cx="8" cy="14" r="1.5" fill="currentColor" />
-                  <circle cx="12" cy="14" r="1.5" fill="currentColor" />
-                  <circle cx="16" cy="14" r="1.5" fill="currentColor" />
-                </svg>
+            <div className="feature-card" style={{ backgroundImage: 'url(/gallery/IMG_8172.jpeg)' }}>
+              <div className="feature-overlay"></div>
+              <div className="feature-content">
+                <h3>Educational Programs</h3>
+                <p>Collaboration with schools to introduce shooting as a constructive sport</p>
               </div>
-              <h3>Educational Programs</h3>
-              <p>Collaboration with schools to introduce shooting as a constructive sport</p>
             </div>
-            <div className="feature-card">
-              <div className="feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2L3 7L12 12L21 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-                  <path d="M3 17L12 22L21 17" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-                  <path d="M3 12L12 17L21 12" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
-                </svg>
+            <div className="feature-card" style={{ backgroundImage: 'url(/gallery/IMG_2862.jpeg)' }}>
+              <div className="feature-overlay"></div>
+              <div className="feature-content">
+                <h3>Safety First</h3>
+                <p>Strong emphasis on safety, technical precision, and ethical sportsmanship</p>
               </div>
-              <h3>Safety First</h3>
-              <p>Strong emphasis on safety, technical precision, and ethical sportsmanship</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="highlights">
+        <div className="container">
+          <h2 className="section-title">Academy Highlights</h2>
+          <div className="highlights-grid">
+            <Link to="/gallery" className="highlight-item">
+              <img src="/gallery/IMG_3152.jpeg" alt="Technical Training Session" loading="lazy" />
+              <div className="highlight-overlay">
+                <h3>Professional Training</h3>
+              </div>
+            </Link>
+            <Link to="/gallery" className="highlight-item">
+              <img src="/gallery/IMG_8216.jpeg" alt="Elite Coaching" loading="lazy" />
+              <div className="highlight-overlay">
+                <h3>Expert Coaching</h3>
+              </div>
+            </Link>
+            <Link to="/gallery" className="highlight-item">
+              <img src="/gallery/IMG_6099.JPG" alt="Competition Day" loading="lazy" />
+              <div className="highlight-overlay">
+                <h3>Competitions</h3>
+              </div>
+            </Link>
+            <Link to="/gallery" className="highlight-item">
+              <img src="/gallery/IMG_7817.jpg" alt="State-of-the-art Facility" loading="lazy" />
+              <div className="highlight-overlay">
+                <h3>Modern Facilities</h3>
+              </div>
+            </Link>
           </div>
         </div>
       </section>

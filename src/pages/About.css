@@ -113,6 +113,7 @@
   box-shadow: var(--shadow-lg);
   border: 3px solid var(--color-blue-200);
   transition: all 0.4s ease;
+  cursor: pointer;
 }
 
 .founder-image-container:hover {
@@ -131,6 +132,124 @@
 .founder-image-container:hover .founder-image {
   transform: scale(1.05);
 }
+
+.image-hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 58, 138, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.founder-image-container:hover .image-hover-overlay {
+  opacity: 1;
+}
+
+.image-hover-overlay .view-icon {
+  font-size: 3rem;
+  color: white;
+}
+
+/* Founder Modal */
+.founder-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.founder-modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  padding: 2rem;
+  animation: zoomIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: -60px;
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.modal-close span {
+  font-size: 3rem;
+  line-height: 1;
+  color: var(--color-gray-700);
+  font-weight: 300;
+}
+
+.modal-close:hover {
+  background: rgba(239, 68, 68, 0.95);
+  border-color: rgba(239, 68, 68, 1);
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.5);
+}
+
+.modal-close:hover span {
+  color: white;
+}
+
+.founder-modal-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1400px;
+}
+
+.modal-image-wrapper {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.modal-image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 .founder-text {
   position: relative;
@@ -638,5 +757,20 @@
 
   .outcome-card {
     padding: 1.5rem;
+  }
+
+  .founder-modal-images {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .modal-close {
+    top: -55px;
+    width: 50px;
+    height: 50px;
+  }
+
+  .modal-close span {
+    font-size: 2.5rem;
   }
 }
