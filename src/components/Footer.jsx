@@ -1,4 +1,5 @@
 import './Footer.css'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -25,10 +26,10 @@ const Footer = () => {
           <div className="footer-section">
             <h4 className="footer-heading">Quick Links</h4>
             <ul className="footer-links">
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/gallery">Gallery</a></li>
-              <li><a href="/corporate">Corporate Inquiries</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About</Link></li>
+              <li><Link to="/gallery">Gallery</Link></li>
+              <li><Link to="/corporate">Corporate Inquiries</Link></li>
             </ul>
           </div>
 
@@ -37,19 +38,19 @@ const Footer = () => {
             <ul className="footer-contact">
               <li>
                 <span className="contact-label">Email:</span>
-                <a href="mailto:info@gunmatrix.com">info@gunmatrix.com</a>
+                <a href="mailto:ananyasapraal2@gmail.com">ananyasapraal2@gmail.com</a>
               </li>
               <li>
                 <span className="contact-label">Phone:</span>
-                <a href="tel:+91XXXXXXXXXX">+91 XXX XXX XXXX</a>
+                <a href="https://wa.me/918487762866?text=Hi%2C%20I%20am%20reaching%20out%20to%20you%20from%20your%20website" target="_blank" rel="noopener noreferrer">+91 84877 62866</a>
               </li>
               <li>
                 <span className="contact-label">Address:</span>
-                <span>GunMatrix Academy, City, India</span>
+                <span>GunMatrix Shooting Academy, LPS Global School, Sector 51, Noida</span>
               </li>
               <li>
                 <span className="contact-label">Hours:</span>
-                <span>Mon-Sat: 9:00 AM - 6:00 PM</span>
+                <span>Mon-Sun: 5:30 PM - 9:30 PM (Friday Off)</span>
               </li>
             </ul>
           </div>
@@ -58,14 +59,14 @@ const Footer = () => {
             <h4 className="footer-heading">Location</h4>
             <div className="map-container">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.2087607273647!2d77.37136931508047!3d28.627981982421896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM3JzQwLjciTiA3N8KwMjInMjYuOSJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224133.76207784802!2d77.19498835947777!3d28.59500879892348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ceff0e8afaa11%3A0x61b9e8a90f8e0be4!2sLPS%20Global%20School!5e0!3m2!1sen!2sin!4v1650000000000!5m2!1sen!2sin"
                 width="100%"
                 height="200"
                 style={{ border: 0, borderRadius: '8px' }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="GunMatrix Academy Location"
+                title="GunMatrix Academy Location - LPS Global School, Sector 51, Noida"
               ></iframe>
             </div>
           </div>
