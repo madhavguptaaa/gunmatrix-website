@@ -13,7 +13,6 @@
     z-index: 9999;
     padding: 1rem;
     animation: fadeIn 0.3s ease-out;
-    overflow-y: auto;
 }
 
 @keyframes fadeIn {
@@ -267,112 +266,71 @@
     margin: 0;
 }
 
-/* Responsive - Tablet */
-@media (max-width: 1024px) {
-    .award-modal-content {
-        max-width: 750px;
-    }
-
-    .three-photos-grid {
-        gap: 1.5rem;
-        padding: 1.5rem;
+/* Responsive */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        border-radius: 16px;
     }
 
     .modal-header {
-        padding: 2rem 1.5rem 1.25rem;
+        padding: 1.5rem 1.5rem 1rem;
     }
 
     .modal-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
     }
 
     .modal-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .modal-body {
+        padding: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    /* Keep images side by side (2 columns) */
+    .modal-images-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .modal-description {
         font-size: 1rem;
     }
 
-    .award-title {
-        font-size: 1.1rem;
+    /* Center signature always */
+    .modal-signature {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        text-align: center;
     }
 
-    .award-description {
-        font-size: 0.95rem;
+    .signature-content {
+        text-align: center;
+    }
+
+    .cta-button {
+        width: 100%;
+        justify-content: center;
     }
 }
 
-/* Responsive - Mobile & Small Tablets */
-@media (max-width: 768px) {
-    .modal-overlay {
-        padding: 1rem;
-        align-items: center;
-    }
-
+/* Mobile - Extra Small Screens */
+@media (max-width: 480px) {
     .modal-content {
-        width: 100%;
-        max-width: 520px;
-        border-radius: 14px;
-        margin: 0 auto;
-    }
-
-    .award-modal-content {
-        max-width: 520px;
+        width: 98%;
+        padding-top: 0.75rem;
     }
 
     .modal-header {
-        padding: 1.25rem 1.15rem 0.85rem;
+        padding: 1.25rem 1rem 1rem;
     }
 
     .modal-title {
-        font-size: 1.4rem;
-        line-height: 1.3;
-    }
-
-    .modal-subtitle {
-        font-size: 0.9rem;
-    }
-
-    /* Make three-photos-grid single column */
-    .three-photos-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    .founder-photos-section {
-        grid-template-rows: auto;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.75rem;
-    }
-
-    .award-photo-item {
-        max-height: 200px;
-    }
-
-    .award-photo-item img {
-        max-height: 200px;
-        object-fit: contain;
-    }
-
-    /* Keep images side by side */
-    .modal-images-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.6rem;
-    }
-
-    .modal-image-container {
-        max-height: 160px;
-    }
-
-    .award-caption {
-        padding: 0.85rem;
-    }
-
-    .award-title {
-        font-size: 0.95rem;
-    }
-
-    .award-description {
-        font-size: 0.8rem;
-        line-height: 1.4;
+        font-size: 1.3rem;
     }
 
     .modal-body {
@@ -380,128 +338,86 @@
         gap: 1rem;
     }
 
-    .modal-description {
-        font-size: 0.9rem;
-        line-height: 1.5;
-        text-align: left;
+    /* Keep 2 columns side by side */
+    .modal-images-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
     }
 
+    /* Fix image cutting on mobile */
+    .modal-image-container {
+        max-height: 180px;
+        width: 100%;
+    }
+
+    .modal-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        max-height: 180px;
+    }
+
+    .modal-description {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    /* Signature always centered */
     .modal-signature {
-        flex-direction: column;
+        text-align: center;
         align-items: center;
-        gap: 0.85rem;
-        padding-top: 0.85rem;
     }
 
     .signature-name {
-        font-size: 1.05rem;
+        font-size: 1.1rem;
     }
 
     .signature-title {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
 
     .cta-button {
-        width: 100%;
-        justify-content: center;
         font-size: 0.85rem;
-        padding: 0.65rem 1rem;
+        padding: 0.5rem 1rem;
     }
 }
 
-/* Mobile - Extra Small Screens */
-@media (max-width: 480px) {
+/* Extra small phones */
+@media (max-width: 375px) {
     .modal-overlay {
-        padding: 0.75rem;
+        padding: 0.5rem;
         align-items: center;
     }
 
     .modal-content {
-        width: 100%;
-        max-width: 380px;
-        padding-top: 0.5rem;
-        border-radius: 12px;
+        max-width: 100%;
     }
 
-    .award-modal-content {
-        max-width: 380px;
-    }
-
-    .modal-header {
-        padding: 1rem 0.85rem 0.75rem;
-    }
-
-    .modal-title {
-        font-size: 1.15rem;
-        line-height: 1.3;
-    }
-
-    .modal-subtitle {
-        font-size: 0.75rem;
-    }
-
-    .three-photos-grid {
-        gap: 0.6rem;
-        padding: 0.6rem;
-    }
-
-    .award-photo-item {
-        max-height: 150px;
-    }
-
-    .award-photo-item img {
-        max-height: 150px;
-    }
-
-    /* Keep images side by side on mobile */
+    /* Still 2 columns */
     .modal-images-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 0.5rem;
     }
 
     .modal-image-container {
-        max-height: 130px;
+        max-height: 150px;
     }
 
-    .award-caption {
-        padding: 0.65rem;
+    .modal-image {
+        max-height: 150px;
     }
 
-    .award-title {
-        font-size: 0.85rem;
-    }
-
-    .award-description {
-        font-size: 0.7rem;
-        line-height: 1.35;
-    }
-
-    .modal-body {
-        padding: 0.75rem;
-        gap: 0.75rem;
+    .modal-title {
+        font-size: 1.1rem;
     }
 
     .modal-description {
-        font-size: 0.8rem;
-        line-height: 1.5;
-        text-align: left;
-    }
-
-    .signature-name {
-        font-size: 0.95rem;
-    }
-
-    .signature-title {
-        font-size: 0.75rem;
-    }
-
-    .modal-signature {
-        gap: 0.7rem;
-        padding-top: 0.7rem;
-    }
-
-    .cta-button {
         font-size: 0.85rem;
-        padding: 0.65rem 1rem;
+    }
+
+    /* Keep signature centered */
+    .modal-signature {
+        text-align: center;
+        align-items: center;
     }
 }

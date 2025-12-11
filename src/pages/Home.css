@@ -387,32 +387,16 @@
     padding: 4rem 0;
   }
 
-  /* Features grid 2x2 on mobile */
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-
   .feature-card {
     padding: 2rem 1.5rem;
-    min-height: 280px;
-  }
-
-  .feature-card h3 {
-    font-size: 1.3rem;
-  }
-
-  .feature-card p {
-    font-size: 0.9rem;
   }
 
   .highlights {
     padding: 4rem 0;
   }
 
-  /* Highlights grid stays 2x2 on mobile */
   .highlights-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 }
@@ -458,28 +442,16 @@
     font-size: 0.95rem;
   }
 
-  /* Keep 2x2 grid on small mobile */
-  .features-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
   .feature-card {
-    min-height: 240px;
-    padding: 1.5rem 1rem;
+    min-height: 300px;
+    padding: 2rem 1.25rem;
   }
 
   .feature-card h3 {
-    font-size: 1.1rem;
+    font-size: 1.4rem;
   }
 
   .feature-card p {
-    font-size: 0.85rem;
-  }
-
-  /* Keep 2x2 grid for highlights on small mobile */
-  .highlights-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    font-size: 0.95rem;
   }
 }

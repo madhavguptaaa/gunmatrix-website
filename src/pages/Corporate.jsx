@@ -178,7 +178,7 @@ const Corporate = () => {
                                     </div>
                                     <div>
                                         <h4>Email</h4>
-                                        <p>gunmatrixshootingacademy@gmail.com</p>
+                                        <p>corporate@gunmatrix.com</p>
                                     </div>
                                 </div>
                                 <div className="contact-item">
@@ -189,7 +189,7 @@ const Corporate = () => {
                                     </div>
                                     <div>
                                         <h4>Phone</h4>
-                                        <p><a href="https://wa.me/919818268256?text=Hi%2C%20I%20am%20reaching%20out%20to%20you%20from%20your%20website" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>+91 98182 68256</a></p>
+                                        <p>+91 XXX XXX XXXX</p>
                                     </div>
                                 </div>
                                 <div className="contact-item">
@@ -201,7 +201,7 @@ const Corporate = () => {
                                     </div>
                                     <div>
                                         <h4>Location</h4>
-                                        <p>GunMatrix Shooting Academy, LPS Global School, Sector 51, Noida</p>
+                                        <p>GunMatrix Academy, India</p>
                                     </div>
                                 </div>
                             </div>
