@@ -354,6 +354,8 @@
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--color-blue-700);
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Trust Indicators */
@@ -683,5 +685,66 @@
     .cta-btn {
         width: 100%;
         max-width: 300px;
+    }
+
+    /* Fix contact details cutting off */
+    .contact-item {
+        padding: 1.25rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .contact-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .contact-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .contact-item h4 {
+        font-size: 0.85rem;
+    }
+
+    .contact-item p {
+        font-size: 0.95rem;
+        word-break: break-all;
+    }
+
+    .form-info h2 {
+        font-size: 2rem;
+    }
+
+    .form-info>p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .corporate-hero .page-title {
+        font-size: 2rem;
+    }
+
+    .corporate-hero .page-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .form-container {
+        padding: 1.5rem;
+    }
+
+    .contact-item {
+        padding: 1rem;
+    }
+
+    .contact-item p {
+        font-size: 0.85rem;
+    }
+
+    .form-info h2 {
+        font-size: 1.7rem;
     }
 }

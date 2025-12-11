@@ -5,6 +5,7 @@ import './Navbar.css'
 const Navbar = () => {
   const location = useLocation()
   const [displayText, setDisplayText] = useState('')
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const fullText = 'GUNMATRIX'
 
   useEffect(() => {
@@ -44,6 +45,27 @@ const Navbar = () => {
     return () => clearInterval(interval)
   }, [])
 
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isMenuOpen])
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  const closeMenu = () => {
+    setIsMenuOpen(false)
+  }
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -52,28 +74,43 @@ const Navbar = () => {
           <span className="navbar-brand-text">{displayText}</span>
           <span className="typing-cursor">|</span>
         </Link>
-        <div className="navbar-links">
+
+        <button
+          className={`hamburger ${isMenuOpen ? 'active' : ''}`}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div className={`navbar-links ${isMenuOpen ? 'active' : ''}`}>
           <Link
             to="/"
             className={location.pathname === '/' ? 'active' : ''}
+            onClick={closeMenu}
           >
             Home
           </Link>
           <Link
             to="/about"
             className={location.pathname === '/about' ? 'active' : ''}
+            onClick={closeMenu}
           >
             About
           </Link>
           <Link
             to="/gallery"
             className={location.pathname === '/gallery' ? 'active' : ''}
+            onClick={closeMenu}
           >
             Gallery
           </Link>
           <Link
             to="/corporate"
             className={location.pathname === '/corporate' ? 'active' : ''}
+            onClick={closeMenu}
           >
             Corporate Inquiries
           </Link>
