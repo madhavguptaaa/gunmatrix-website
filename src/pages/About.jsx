@@ -69,7 +69,7 @@ const About = () => {
                     levels, she brings unparalleled expertise and passion to GunMatrix Academy.
                   </p>
                   <p>
-                    <span className="highlight-founder">Ananya's</span> journey in shooting sports began at a young age, where her natural talent and
+                    Her journey in shooting sports began at a young age, where her natural talent and
                     dedication quickly propelled her to compete at the <span className="highlight-important">highest levels</span>. Throughout her competitive
                     career, she has represented her state in numerous <span className="highlight-important">national championships</span>, consistently
                     demonstrating exceptional skill and mental fortitude. Her achievements include multiple
@@ -77,21 +77,21 @@ const About = () => {
                     in her category.
                   </p>
                   <p>
-                    Beyond her personal accomplishments, <span className="highlight-founder">Ananya</span> has established herself as a highly sought-after
+                    Beyond her personal accomplishments, she has established herself as a highly sought-after
                     coach and mentor. She has trained athletes who have gone on to <span className="highlight-important">represent the country
                       internationally</span> and now serve with distinction in defence and professional forces. Her
                     coaching philosophy emphasizes not just technical excellence, but also the development of
                     <span className="highlight-important">mental strength, discipline, and character</span>—qualities that extend far beyond the shooting range.
                   </p>
                   <p>
-                    What truly sets <span className="highlight-founder">Ananya</span> apart is her unique combination of expertise. As a trained <span className="highlight-important">sports
+                    What truly sets her apart is her unique combination of expertise. As a trained <span className="highlight-important">sports
                       psychologist</span>, she understands the critical role of <span className="highlight-important">mental conditioning</span> in athletic performance
                     and personal development. This holistic approach enables her to provide comprehensive training
                     that addresses both the physical and psychological aspects of shooting sports, helping students
                     achieve their full potential while building confidence and emotional resilience.
                   </p>
                   <p>
-                    Under <span className="highlight-founder">Ananya's</span> leadership, GunMatrix Academy has become a <span className="highlight-important">premier destination</span> for shooting
+                    Under her leadership, GunMatrix Academy has become a <span className="highlight-important">premier destination</span> for shooting
                     sports education, welcoming everyone from curious beginners to aspiring champions. Her vision
                     is to make shooting accessible as both a competitive sport and a recreational activity that
                     promotes mental well-being, focus, and personal growth. Through her dedication and innovative
@@ -108,7 +108,7 @@ const About = () => {
         <div className="container">
           <h2 className="section-title">Athlete Outcomes & Business-Driven Strategy</h2>
           <p className="expertise-intro">
-            Ananya has designed strategic performance pathways that have enabled athletes to:
+            She has designed strategic performance pathways that have enabled athletes to:
           </p>
           <div className="outcomes-grid">
             <div className="outcome-card">
