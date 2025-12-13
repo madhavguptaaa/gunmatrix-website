@@ -112,7 +112,7 @@ const Navbar = () => {
             className={location.pathname === '/corporate' ? 'active' : ''}
             onClick={closeMenu}
           >
-            Corporate Inquiries
+            Inquiries
           </Link>
         </div>
       </div>

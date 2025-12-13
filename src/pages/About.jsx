@@ -195,10 +195,10 @@ const About = () => {
             <h3>Contact</h3>
             <div className="contact-details-grid">
               <div className="contact-item-detail">
-                <strong>Phone:</strong> <a href="tel:+918487762866">+91 84877 62866</a>
+                <strong>Phone:</strong> <a href="https://wa.me/919818268256?text=Hi%2C%20I%20am%20reaching%20out%20to%20you%20from%20your%20website" target="_blank" rel="noopener noreferrer">+91 9818268256</a>
               </div>
               <div className="contact-item-detail">
-                <strong>Email:</strong> <a href="mailto:ananyasapraal2@gmail.com">ananyasapraal2@gmail.com</a>
+                <strong>Email:</strong> <a href="mailto:gunmatrixshootingacademy@gmail.com?subject=Reaching out to you from your website">gunmatrixshootingacademy@gmail.com</a>
               </div>
             </div>
           </div>

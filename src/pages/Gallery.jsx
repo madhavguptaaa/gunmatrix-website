@@ -17,6 +17,7 @@ const Gallery = () => {
           { file: '201eec45-210e-4b79-a7e8-2e8caeaab9a5.MP4', title: 'Competition Highlights', type: 'video' },
           { file: '2f42d820-e8e8-4a28-9422-ef4c3ead5bca.MP4', title: 'Academy Tour', type: 'video' },
           { file: '9e76537e-cb4e-49a7-b79e-6dbfe6f33359.MP4', title: 'Training Session', type: 'video' },
+          { file: 'WhatsApp Video 2025-12-11 at 11.08.13 PM.mp4', title: 'Practice Session', type: 'video' },
           { file: '313c1633-96c9-4451-9206-3b50e033e9b2.JPG', title: 'Range View', type: 'image' },
           { file: '427ee849-4650-4fc8-b5c6-e0e52d2e7ddc.JPG', title: 'Success Story', type: 'image' },
           { file: '9d9694b1-dbca-4736-8110-cbb383a6f0e0.JPG', title: 'Team Event', type: 'image' },
@@ -28,7 +29,22 @@ const Gallery = () => {
           { file: 'IMG_6099.JPG', title: 'Competition Day', type: 'image' },
           { file: 'IMG_7817.jpg', title: 'Academy Grounds', type: 'image' },
           { file: 'IMG_8172.jpeg', title: 'Student Achievement', type: 'image' },
-          { file: 'IMG_8216.jpeg', title: 'Elite Coaching', type: 'image' }
+          { file: 'IMG_8216.jpeg', title: 'Elite Coaching', type: 'image' },
+          { file: 'WhatsApp Image 2025-12-11 at 11.08.10 PM (1).jpeg', title: 'Training Moment', type: 'image' },
+          { file: 'WhatsApp Image 2025-12-11 at 11.08.10 PM (2).jpeg', title: 'Academy Session', type: 'image' },
+          { file: 'WhatsApp Image 2025-12-11 at 11.08.10 PM (3).jpeg', title: 'Team Training', type: 'image' },
+          { file: 'WhatsApp Image 2025-12-11 at 11.08.10 PM (4).jpeg', title: 'Shooting Practice', type: 'image' },
+          { file: 'WhatsApp Image 2025-12-11 at 11.08.10 PM (6).jpeg', title: 'Academy Event', type: 'image' },
+          { file: 'WhatsApp Image 2025-12-11 at 11.08.10 PM.jpeg', title: 'Team Photo', type: 'image' },
+          { file: 'WhatsApp Image 2025-12-11 at 11.08.12 PM (1).jpeg', title: 'Training Session', type: 'image' },
+          { file: 'WhatsApp Image 2025-12-11 at 11.08.12 PM.jpeg', title: 'Practice Time', type: 'image' },
+          { file: 'WhatsApp Image 2025-12-11 at 11.08.13 PM (1).jpeg', title: 'Academy Activity', type: 'image' },
+          { file: 'WhatsApp Image 2025-12-11 at 11.08.13 PM (2).jpeg', title: 'Shooting Range', type: 'image' },
+          { file: 'WhatsApp Image 2025-12-11 at 11.08.13 PM (3).jpeg', title: 'Training Day', type: 'image' },
+          { file: 'WhatsApp Image 2025-12-11 at 11.08.13 PM (4).jpeg', title: 'Academy Life', type: 'image' },
+          { file: 'WhatsApp Image 2025-12-11 at 11.08.13 PM (5).jpeg', title: 'Student Practice', type: 'image' },
+          { file: 'WhatsApp Image 2025-12-11 at 11.08.13 PM.jpeg', title: 'Team Building', type: 'image' },
+          { file: 'WhatsApp Image 2025-12-11 at 11.15.49 PM.jpeg', title: 'Academy Success', type: 'image' }
         ]
 
         const imageData = mediaFiles.map((item, index) => ({

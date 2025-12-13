@@ -38,11 +38,11 @@ const Footer = () => {
             <ul className="footer-contact">
               <li>
                 <span className="contact-label">Email:</span>
-                <a href="mailto:ananyasapraal2@gmail.com">ananyasapraal2@gmail.com</a>
+                <a href="mailto:gunmatrixshootingacademy@gmail.com">gunmatrixshootingacademy@gmail.com</a>
               </li>
               <li>
                 <span className="contact-label">Phone:</span>
-                <a href="https://wa.me/918487762866?text=Hi%2C%20I%20am%20reaching%20out%20to%20you%20from%20your%20website" target="_blank" rel="noopener noreferrer">+91 84877 62866</a>
+                <a href="https://wa.me/919818268256?text=Hi%2C%20I%20am%20reaching%20out%20to%20you%20from%20your%20website" target="_blank" rel="noopener noreferrer">+91 9818268256</a>
               </li>
               <li>
                 <span className="contact-label">Address:</span>

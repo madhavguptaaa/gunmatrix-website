@@ -59,7 +59,7 @@ const Home = () => {
         <div className="container">
           <h2 className="section-title">Our Approach</h2>
           <div className="features-grid">
-            <div className="feature-card" style={{ backgroundImage: 'url(/gallery/IMG_6099.JPG)' }}>
+            <div className="feature-card" style={{ backgroundImage: 'url(/gallery/IMG_8172.jpeg)' }}>
               <div className="feature-overlay"></div>
               <div className="feature-content">
                 <h3>Competitive Excellence</h3>
@@ -73,14 +73,14 @@ const Home = () => {
                 <p>Shooting as a means to reduce stress and improve mental well-being</p>
               </div>
             </div>
-            <div className="feature-card" style={{ backgroundImage: 'url(/gallery/IMG_8172.jpeg)' }}>
+            <div className="feature-card" style={{ backgroundImage: 'url(/gallery/IMG_6099.JPG)' }}>
               <div className="feature-overlay"></div>
               <div className="feature-content">
                 <h3>Educational Programs</h3>
                 <p>Collaboration with schools to introduce shooting as a constructive sport</p>
               </div>
             </div>
-            <div className="feature-card" style={{ backgroundImage: 'url(/gallery/IMG_2862.jpeg)' }}>
+            <div className="feature-card" style={{ backgroundImage: 'url(/gallery/IMG_3303.jpeg)' }}>
               <div className="feature-overlay"></div>
               <div className="feature-content">
                 <h3>Safety First</h3>

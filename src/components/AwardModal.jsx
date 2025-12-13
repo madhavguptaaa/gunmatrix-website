@@ -37,7 +37,7 @@ const AwardModal = () => {
                         </div>
                         <div className="modal-image-container">
                             <img
-                                src="/founder-photo-3.png"
+                                src="/rekha-gupta-photo.jpeg"
                                 alt="Ananya Sapra - Founder of GunMatrix"
                                 className="modal-image"
                             />

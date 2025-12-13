@@ -178,7 +178,7 @@ const Corporate = () => {
                                     </div>
                                     <div>
                                         <h4>Email</h4>
-                                        <p>corporate@gunmatrix.com</p>
+                                        <p><a href="mailto:gunmatrixshootingacademy@gmail.com" style={{ color: 'inherit', textDecoration: 'none' }}>gunmatrixshootingacademy@gmail.com</a></p>
                                     </div>
                                 </div>
                                 <div className="contact-item">
@@ -189,7 +189,7 @@ const Corporate = () => {
                                     </div>
                                     <div>
                                         <h4>Phone</h4>
-                                        <p>+91 XXX XXX XXXX</p>
+                                        <p><a href="https://wa.me/919818268256?text=Hi%2C%20I%20am%20reaching%20out%20to%20you%20from%20your%20website" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>+91 9818268256</a></p>
                                     </div>
                                 </div>
                                 <div className="contact-item">
@@ -200,8 +200,19 @@ const Corporate = () => {
                                         </svg>
                                     </div>
                                     <div>
-                                        <h4>Location</h4>
-                                        <p>GunMatrix Academy, India</p>
+                                        <h4>Address</h4>
+                                        <p>GunMatrix Shooting Academy, LPS Global School, Sector 51, Noida</p>
+                                    </div>
+                                </div>
+                                <div className="contact-item">
+                                    <div className="contact-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4>Hours</h4>
+                                        <p>Mon-Sun: 5:30 PM - 9:30 PM (Friday Off)</p>
                                     </div>
                                 </div>
                             </div>

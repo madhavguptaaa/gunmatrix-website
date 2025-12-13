@@ -708,15 +708,22 @@
 
 @media (max-width: 768px) {
   .about-hero {
-    padding: 5rem 1.5rem 3rem;
+    min-height: 45vh;
+    padding: 3rem 1.5rem 2rem;
   }
 
+  .about-hero .hero-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .about-hero .page-title,
   .page-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
+  .about-hero .page-subtitle,
   .page-subtitle {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
   }
 
   .founder,
