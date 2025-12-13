@@ -491,6 +491,11 @@
   font-size: 1.1rem;
   font-weight: 600;
   transition: all 0.3s ease;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  display: inline-block;
+  max-width: 100%;
 }
 
 .contact-item-detail a:hover {
@@ -779,5 +784,28 @@
 
   .modal-close span {
     font-size: 2.5rem;
+  }
+
+  .contact-info-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-info-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-details-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .contact-item-detail {
+    padding: 1.25rem;
+  }
+
+  .contact-item-detail a {
+    font-size: 0.95rem;
+    line-height: 1.4;
   }
 }
