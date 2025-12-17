@@ -1,0 +1,11 @@
+{
+    "name": "gunmatrix-fullstack",
+    "version": "1.0.0",
+    "description": "Scripts to run both frontend and backend servers",
+    "scripts": {
+        "start:frontend": "cd .. && npm run dev",
+        "start:backend": "npm start",
+        "start:backend:dev": "npm run dev",
+        "install:all": "npm install && cd .. && npm install"
+    }
+}
