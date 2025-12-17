@@ -28,7 +28,10 @@ const Corporate = () => {
         setError(null)
 
         try {
-            const response = await fetch('http://localhost:3001/api/contact', {
+            // Use /api/contact for both local dev and production
+            const apiUrl = '/api/contact';
+
+            const response = await fetch(apiUrl, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
