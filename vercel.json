@@ -31,11 +31,5 @@
                 }
             ]
         }
-    ],
-    "env": {
-        "EMAIL_SERVICE": "@email_service",
-        "EMAIL_USER": "@email_user",
-        "EMAIL_PASS": "@email_pass",
-        "RECEIVER_EMAIL": "@receiver_email"
-    }
+    ]
 }
