@@ -108,8 +108,8 @@ const Navbar = () => {
             Gallery
           </Link>
           <Link
-            to="/corporate"
-            className={location.pathname === '/corporate' ? 'active' : ''}
+            to="/inquiries"
+            className={location.pathname === '/inquiries' ? 'active' : ''}
             onClick={closeMenu}
           >
             Inquiries

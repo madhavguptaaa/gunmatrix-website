@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import './Corporate.css'
+import './Inquiries.css'
 
-const Corporate = () => {
+const Inquiries = () => {
     const [formData, setFormData] = useState({
         companyName: '',
         contactPerson: '',
@@ -73,8 +73,8 @@ const Corporate = () => {
     }
 
     return (
-        <div className="corporate-page">
-            <section className="corporate-hero">
+        <div className="inquiries-page">
+            <section className="inquiries-hero">
                 <video
                     className="hero-video"
                     autoPlay
@@ -86,15 +86,15 @@ const Corporate = () => {
                 </video>
                 <div className="hero-overlay"></div>
                 <div className="hero-content">
-                    <div className="hero-badge">Corporate Partnerships</div>
-                    <h1 className="page-title">Corporate Inquiries</h1>
+                    <div className="hero-badge">Partnerships</div>
+                    <h1 className="page-title">Inquiries</h1>
                     <p className="page-subtitle">
                         Elevate your organization with professional shooting programs, team building activities, and corporate wellness initiatives
                     </p>
                 </div>
             </section>
 
-            <section className="corporate-benefits">
+            <section className="inquiries-benefits">
                 <div className="container">
                     <h2 className="section-title">Why Choose GunMatrix for Your Organization</h2>
                     <div className="benefits-grid">
@@ -222,7 +222,7 @@ const Corporate = () => {
                         </div>
 
                         <div className="form-container">
-                            <form onSubmit={handleSubmit} className="corporate-form">
+                            <form onSubmit={handleSubmit} className="inquiries-form">
                                 <div className="form-group">
                                     <label htmlFor="companyName">Company Name *</label>
                                     <input
@@ -359,4 +359,4 @@ const Corporate = () => {
     )
 }
 
-export default Corporate
+export default Inquiries

@@ -1,9 +1,9 @@
-.corporate-page {
+.inquiries-page {
     flex: 1;
 }
 
 /* Hero Section with Video Background */
-.corporate-hero {
+.inquiries-hero {
     position: relative;
     min-height: 70vh;
     display: flex;
@@ -13,7 +13,7 @@
     color: var(--color-white);
 }
 
-.corporate-hero .hero-video {
+.inquiries-hero .hero-video {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -36,7 +36,7 @@
     z-index: 1;
 }
 
-.corporate-hero .hero-content {
+.inquiries-hero .hero-content {
     position: relative;
     z-index: 2;
     text-align: center;
@@ -61,7 +61,7 @@
     animation: fadeInUp 1s ease-out 0.2s both;
 }
 
-.corporate-hero .page-title {
+.inquiries-hero .page-title {
     font-size: 4rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
@@ -72,7 +72,7 @@
     animation: fadeInUp 1s ease-out 0.4s both;
 }
 
-.corporate-hero .page-subtitle {
+.inquiries-hero .page-subtitle {
     font-size: 1.3rem;
     line-height: 1.8;
     color: var(--color-blue-100);
@@ -149,7 +149,7 @@
 }
 
 /* Benefits Section */
-.corporate-benefits {
+.inquiries-benefits {
     padding: 6rem 0;
     background: linear-gradient(to bottom, var(--color-white), var(--color-gray-50));
     position: relative;
@@ -393,7 +393,7 @@
     border: 2px solid var(--color-blue-100);
 }
 
-.corporate-form {
+.inquiries-form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -655,11 +655,11 @@
 }
 
 @media (max-width: 768px) {
-    .corporate-hero .page-title {
+    .inquiries-hero .page-title {
         font-size: 2.5rem;
     }
 
-    .corporate-hero .page-subtitle {
+    .inquiries-hero .page-subtitle {
         font-size: 1.1rem;
     }
 
@@ -689,14 +689,28 @@
         max-width: 300px;
     }
 
+    /* Mobile Fix for Form Info Alignment */
+    .form-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
     .contact-details {
         gap: 1rem;
+        width: 100%;
+        /* Ensure full width for centering */
     }
 
     .contact-item {
         flex-direction: column;
         text-align: center;
         gap: 1rem;
+        align-items: center;
+        /* Ensure items center specifically */
+        width: 100%;
+        /* Ensure items take full width to center content */
     }
 
     .contact-icon {
@@ -717,7 +731,11 @@
 }
 
 @media (max-width: 480px) {
-    .corporate-hero .page-title {
+    .container {
+        padding: 0 1.25rem;
+    }
+
+    .inquiries-hero .page-title {
         font-size: 2rem;
     }
 

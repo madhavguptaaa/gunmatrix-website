@@ -5,7 +5,7 @@ import AwardModal from './components/AwardModal'
 import Home from './pages/Home'
 import About from './pages/About'
 import Gallery from './pages/Gallery'
-import Corporate from './pages/Corporate'
+import Inquiries from './pages/Inquiries'
 import ScrollToTop from './components/ScrollToTop'
 import './App.css'
 
@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/corporate" element={<Corporate />} />
+          <Route path="/inquiries" element={<Inquiries />} />
         </Routes>
         <Footer />
       </div>
