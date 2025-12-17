@@ -354,6 +354,9 @@
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--color-blue-700);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
 }
 
 /* Trust Indicators */
@@ -420,6 +423,8 @@
 .form-group input,
 .form-group select,
 .form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
     padding: 1rem 1.2rem;
     border: 2px solid var(--color-gray-200);
     border-radius: 10px;
@@ -732,7 +737,7 @@
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 1.25rem;
+        padding: 0 2rem;
     }
 
     .inquiries-hero .page-title {
@@ -744,10 +749,10 @@
     }
 
     .form-container {
-        padding: 1.25rem;
+        padding: 1.5rem;
     }
 
     .contact-item {
-        padding: 1.25rem;
+        padding: 1.5rem;
     }
 }
